@@ -1,6 +1,7 @@
 package Testbase.API_Connections;
 
 import Utility.ConfigurationReader;
+import io.restassured.builder.RequestSpecBuilder;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,11 +12,8 @@ import static io.restassured.RestAssured.*;
 public class BookstoreConnection {
 
 
-
     @BeforeAll
-
     public static void setUpAPI(){
-
         baseURI = ConfigurationReader.getProperty("baseURIBooks");
         basePath = ConfigurationReader.getProperty("basePathBooks");
     }
